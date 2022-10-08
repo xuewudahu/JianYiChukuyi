@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_card"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_20"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_back_stationtype"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/setting_back_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:text="操作类型"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_24" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/linearlayout_select_white"
+                android:layout_alignParentRight="true">
+                <LinearLayout
+                    android:id="@+id/singleScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="单扫"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/multiScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_24"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        android:text="混扫"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:background="@color/gray"
+            android:layout_width="fill_parent"
+            android:layout_height="2.0dip"
+            android:layout_marginTop="5dp"
+            android:alpha="0.3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:id="@+id/iv_restart_app"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:src="@mipmap/restart_app" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/ic_courier" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="多多"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_duoduo"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/kuaibao_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="快宝"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_kuaibao"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/yunda_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="韵达超市"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_yunda"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/yshoufalogo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="驿站助手"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_yizhanzhushou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cainiao_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="百世邻里"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_baishilaiqu"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/kuaidicaoshi_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="快递超市"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_kuaidichaoshi"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/mama_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="驿收发"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_yishoufa"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/jt_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="极兔"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_jitu"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_courier" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="快递员小扁担"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_kuaidiyuanxiaobiandan"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_stage" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="驿站小扁担"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_yizhanxiaobiandan"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/shape_write"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_panda" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="熊貓快收"
+                    android:textColor="#FF217AD2"
+                    android:textSize="@dimen/sp_20" />
+
+                <Switch
+                    android:id="@+id/rb_panda"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:thumb="@drawable/yunpan_switch_ios_thumb"
+                    android:track="@drawable/yunpan_switch_ios_track_selector" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+

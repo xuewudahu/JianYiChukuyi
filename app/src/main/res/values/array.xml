@@ -1,0 +1,107 @@
+<resources>
+
+    <string-array translatable="false" name="camera_params">
+        <item>多条码</item>
+        <item>图片解码</item>
+        <item>补光亮度</item>
+        <item>采图模式</item>
+        <item>ISO</item>
+    </string-array>
+
+    <string-array translatable="false" name="camera_save_type">
+        <item>关闭</item>
+        <item>仅成功</item>
+        <item>仅失败</item>
+        <item>所有</item>
+        <item>调试</item>
+    </string-array>
+
+    <string-array translatable="false" name="camera_save_format">
+        <item>yuv</item>
+        <item>png</item>
+        <item>jpeg</item>
+    </string-array>
+
+    <string-array translatable="false" name="camera_list">
+        <item>Camera0</item>
+    </string-array>
+
+    <string-array name="codabar_checksum_entries">
+        <item>No checksum</item>
+        <item>Use checksum and output check char</item>
+        <item>Use checksum and strip check char</item>
+    </string-array>
+    <string-array name="codabar_checksum_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="code11_checksum_entries">
+        <item>No checksum</item>
+        <item>Use 1-digit checksum and output check char</item>
+        <item>Use 1-digit checksum and strip check char</item>
+        <item>Use 2-digit checksum and output check char</item>
+        <item>Use 2-digit checksum and strip check char</item>
+    </string-array>
+    <string-array name="code11_checksum_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="msiplessey_checksum_entries">
+        <item>No checksum</item>
+        <item>Use Mod 10 checksum and output check char</item>
+        <item>Use Mod 10 checksum and strip check char</item>
+        <item>Use Mod 10/10 checksum and output check chars</item>
+        <item>Use Mod 10/10 checksum and strip check chars</item>
+        <item>Use Mod 11/10 checksum and output check char</item>
+        <item>Use Mod 11/10 checksum and strip check char</item>
+    </string-array>
+    <string-array name="msiplessey_checksum_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="server_option">
+        <item>多多驿站</item>
+        <item>快宝驿站</item>
+        <item>驿站小扁担</item>
+        <item>驿站助手</item>
+        <item>百世邻里</item>
+        <item>兔喜快递超市</item>
+        <item>快递员小扁担</item>
+        <item>极兔</item>
+        <item>摩西管家</item>
+        <item>丰巢服务站</item>
+        <item>妈妈驿站</item>
+        <item>驿收发</item>
+        <item>中邮自提</item>
+        <item>中邮驿站</item>
+        <item>熊猫快收</item>
+        <item>蓝店</item>
+        <item>韵达快递</item>
+        <item>粉丝生活</item>
+        <item>果果驿站</item>
+        <item>近邻宝高拍仪</item>
+        <item>近邻宝快递取件</item>
+        <item>近邻宝OCR接驳</item>
+        <item>近邻宝取件签收</item>
+        <item>速递易共配</item>
+        <item>聚水潭</item>
+        <item>星火</item>
+        <item>溪鸟高拍仪</item>
+        <item>小兵驿站</item>
+        <item>吉客云</item>
+        <item>喵站</item>
+        <item>众邮称重</item>
+    </string-array>
+
+
+</resources>
