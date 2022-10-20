@@ -916,7 +916,50 @@
                     android:src="@mipmap/setting_right_icon" />
             </RelativeLayout>
         </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/settings_update"
+            android:orientation="horizontal"
+            android:background="@mipmap/setting_btn_icon"
+            android:paddingLeft="@dimen/dp_32"
+            android:paddingRight="@dimen/dp_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginTop="-10dp">
 
+            <ImageView
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:layout_centerVertical="true"
+                android:src="@drawable/settings_update" />
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="升级APP" />
+
+            </LinearLayout>
+            <RelativeLayout
+
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/setting_right_icon" />
+            </RelativeLayout>
+        </RelativeLayout>
   <!--      <ImageView
             android:id="@+id/settings_restart_app"
             android:layout_width="@dimen/dp_152"

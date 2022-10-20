@@ -122,14 +122,11 @@ public class AdroidUtil {
         Log.e("wwwwwww", "开始保存图片");
         boolean isSuccess=false;
         File imageFile = new File(path);
-        Log.e("wxw_w","--"+bitmap.toString());
         BufferedOutputStream bos = null;
         try {
             bos = new BufferedOutputStream(new FileOutputStream(imageFile));
             bitmap.compress(Bitmap.CompressFormat.JPEG, FrameSaver.QUALITY, bos);
             bos.flush();
-            bos.close();
-            bitmap.recycle();
             isSuccess=true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -138,7 +135,6 @@ public class AdroidUtil {
             if (bos != null) {
                 try {
                     bos.close();
-                    bos = null;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -146,7 +142,6 @@ public class AdroidUtil {
             if(bitmap != null) {
                 bitmap.recycle();
             }
-            imageFile = null;
         }
         Log.e("wwwwwww", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~结束保存图片");
         return isSuccess;

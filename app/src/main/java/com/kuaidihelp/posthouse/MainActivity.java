@@ -290,7 +290,7 @@ public class MainActivity extends Activity implements RqDecoder.ResultCallback, 
         boolean scanState = sharedPreferences.getBoolean(SCAN_CAMERA_OPENED, true);
         boolean decodeState = sharedPreferences.getBoolean(START_DECODE_OPEND, true);
         int lightState = sharedPreferences.getInt(FILL_LIGHT_OPENED, 10);
-        boolean gammaState = sharedPreferences.getBoolean(GAMMA_ON, false);
+        boolean gammaState = sharedPreferences.getBoolean(GAMMA_ON, true);
         boolean frontCamera = sharedPreferences.getBoolean(FRONT_CAMERA_OPENED, true);
         soundState = sharedPreferences.getBoolean(SCAN_SOUND_OPENED, false);
         int delayTime =MyApplication.getDelayTime();
@@ -526,6 +526,7 @@ public class MainActivity extends Activity implements RqDecoder.ResultCallback, 
                     editor.putInt("Express_count", count);
                     editor.commit();
                     textViewResult.setText("出库成功!");
+                    systemTTS.stopSpeak();
                     systemTTS.playText("出库成功");
                     break;
                 case CHUKUING_MORE:
@@ -537,10 +538,12 @@ public class MainActivity extends Activity implements RqDecoder.ResultCallback, 
                     editor1.putInt("Express_count", count2);
                     editor1.commit();
                     textViewResult.setText("还有未取包裹,请及时领取!");
+                    systemTTS.stopSpeak();
                     systemTTS.playText("您当前还有未取包裹，请及时领取");
                     break;
                 case CHUKUED:
                     textViewResult.setText("已经出库!");
+                    systemTTS.stopSpeak();
                     systemTTS.playText("已出库");
                     break;
                 case RESULT:
@@ -549,6 +552,7 @@ public class MainActivity extends Activity implements RqDecoder.ResultCallback, 
                 case NOTLIBRARY:
                     String mes = msg.obj.toString();
                     textViewResult.setText(mes);
+                    systemTTS.stopSpeak();
                     systemTTS.playText("出库失败");
                     break;
                 case NONET:

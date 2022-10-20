@@ -79,6 +79,7 @@ public class SettingsActivity extends AppCompatActivity {
         RelativeLayout relativeLayoutPhotosearch = findViewById(R.id.photo_search);
         RelativeLayout relativeLayoutWifiSettings = findViewById(R.id.wifi_settings);
         RelativeLayout relativeLayoutBrowerSettings = findViewById(R.id.settings_browser);
+        RelativeLayout relativeLayoutUpdateSettings = findViewById(R.id.settings_update);
         RelativeLayout relativeLayoutSystemSettings = findViewById(R.id.system_settings);
         RelativeLayout relativeLayoutweight = findViewById(R.id.weight);
         RelativeLayout relativeLayoutcamera = findViewById(R.id.camera);
@@ -120,6 +121,7 @@ public class SettingsActivity extends AppCompatActivity {
         relativeLayoutWifiSettings.setOnClickListener(new listener());
         relativeLayoutSystemSettings.setOnClickListener(new listener());
         relativeLayoutBrowerSettings.setOnClickListener(new listener());
+        relativeLayoutUpdateSettings.setOnClickListener(new listener());
         relativeLayoutReportupdate.setOnClickListener(new listener());
         relativeLayoutSpeedtest.setOnClickListener(new listener());
         relativeLayoutTemplateselection.setOnClickListener(new listener());
@@ -262,6 +264,16 @@ public class SettingsActivity extends AppCompatActivity {
                         lastonclickTime = time_button_browser;
                     }
                     break;
+                    case R.id.settings_update:
+                    Long time_button_update = SystemClock.uptimeMillis();
+                    if (time_button_update - lastonclickTime >= 1500) {
+                        Intent intent = new Intent();
+                        intent.setComponent(new ComponentName("com.neolix.upgrade","com.neolix.upgrade.activity.SplashActivity"));
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        lastonclickTime = time_button_update;
+                    }
+                    break;
                 case R.id.system_settings:
                     Long time_button_system = SystemClock.uptimeMillis();
                     if (time_button_system - lastonclickTime >= 1500) {
@@ -396,7 +408,7 @@ public class SettingsActivity extends AppCompatActivity {
         boolean scanState = sharedPreferences.getBoolean(SCAN_CAMERA_OPENED, true);
         boolean faceState = sharedPreferences.getBoolean(FRONT_CAMERA_OPENED, true);
         boolean decodeState = sharedPreferences.getBoolean(START_DECODE_OPEND, true);
-        boolean gammaState = sharedPreferences.getBoolean(GAMMA_ON, false);
+        boolean gammaState = sharedPreferences.getBoolean(GAMMA_ON, true);
         boolean soundState = sharedPreferences.getBoolean(SCAN_SOUND_OPENED, false);
         //boolean scanTestState = sharedPreferences.getBoolean(SCAN_SCAN_TEST, false);
         //switchLightswitch.setChecked(lightState);
